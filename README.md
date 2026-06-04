@@ -1,4 +1,4 @@
-# <img src="logo.png" align="left" height="42" width="42" style="border-radius:8px; margin-right:12px; vertical-align:middle;"> Type-Sprint: Advanced Web Typing Trainer
+# Type-Sprint: Advanced Web Typing Trainer
 
 Type-Sprint is a feature-rich, premium typing practice web application designed to help users measure, analyze, and dramatically improve their typing speed, accuracy, and muscle memory. 
 
