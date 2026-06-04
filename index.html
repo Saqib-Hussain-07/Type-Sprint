@@ -1,83 +1,197 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="This Speed Typing Test will give you an acuurate speed test and help increase your typing speed"/>
+<html lang="en" dir="ltr" data-theme="dark">
 
-    <title>Typing Test</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description"
+    content="This Speed Typing Test will give you an accurate speed test and help increase your typing speed" />
 
-    <link rel="icon" href="favicon.ico">
+  <title>Typing Test</title>
 
-    <!--Bootstrap 4 -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
 
-    <link rel="stylesheet" href="styles.css">
+  <!--Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Source+Code+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 
-  </head>
-  <body>
-    <div class="container-fluid box ">
-      <div class="top">
-          <h1 id="heading" class = "yellow">Typing Speed Test</h1>
-          <div class="limits-box">
-            <div class="limit">
-              <a id="thirty" class="yellow"  href="#" >30s</a>
-              <a id="sixty"  href="#" >60s</a>
-            </div>
-            <div class="limit">
-              <a id="beg" class="yellow"  href="#" >beginner</a>
-              <a id="pro"  href="#" >pro</a>
-            </div>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Source+Code+Pro:wght@300;400;700&display=swap"
+    rel="stylesheet">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 
+</head>
+
+<body>
+  <div class="container-fluid box ">
+    <div class="top">
+      <h1 id="heading" class="yellow">Typing Speed Test</h1>
+      <div class="center">
+        <div class="limits-box">
+          <div class="limit">
+            <a id="thirty" class="yellow" href="#" data-tooltip="Set test duration to 30 seconds">30s</a>
+            <a id="sixty" href="#" data-tooltip="Set test duration to 60 seconds">60s</a>
+            <a id="words" href="#" data-tooltip="Switch to word-count target mode">words</a>
           </div>
-      </div>
-
-      <div class="stats center">
-        <div class="stat-block if">
-          <div id="timeName" class = "stat-name yellow if">Time</div>
-          <div id="time" class="details if ">30</div>
+          <div class="limit">
+            <a id="beg" class="yellow" href="#" data-tooltip="Beginner vocabulary (simpler words)">beginner</a>
+            <a id="pro" href="#" data-tooltip="Pro vocabulary (advanced words)">pro</a>
+          </div>
+          <div class="limit">
+            <a id="custom" href="#" data-tooltip="Paste your own custom text to practice">custom</a>
+            <a id="code" href="#" data-tooltip="Practice typing programming language terms">code</a>
+          </div>
+          <div class="limit">
+            <a id="drill" href="#" data-tooltip="Practice words you mistyped in recent tests">drill</a>
+            <a id="sudden" href="#" data-tooltip="Sudden Death: test ends immediately if you make a mistake">sudden</a>
+            <a id="zen" href="#" data-tooltip="Zen Mode: no timer, no score, escape to end">zen</a>
+          </div>
+          <div class="limit setting-controls">
+            <a id="themeToggle" href="#" title="Switch theme"
+              data-tooltip="Switch theme (Dark, Light, Hacker, Dracula)">&#9680;</a>
+            <a id="soundToggle" class="yellow" href="#" title="Toggle sound"
+              data-tooltip="Toggle typewriter & error sounds">&#9834;</a>
+          </div>
         </div>
-
-        <div class="stat-block if">
-          <div id="cwName" class = "stat-name yellow if">CW</div>
-          <div id="cw" class="details if">0</div>
+        <div id="wordCountOptions" class="wc-options-pill">
+          <a id="wc25" class="yellow" href="#" data-tooltip="Target: 25 words">25w</a>
+          <a id="wc50" href="#" data-tooltip="Target: 50 words">50w</a>
+          <a id="wc100" href="#" data-tooltip="Target: 100 words">100w</a>
         </div>
       </div>
-
-
-      <div class="text-display" id="textDisplay">
-
-      </div>
-
-      <div class="input-area center">
-        <textarea rows="1" class="text-input" id="textInput" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-      </div>
-
-      <div  class="restart-button center">
-        <a id="restartBtn" class = "current" href="#">
-          <i class="fas fa-redo"></i>
-        </a>
-      </div>
-
-      <footer class="center">©2021 <a class="grey" href="https://shreyagarwal13.github.io/shrey_personal_website/">Shrey Agarwal</a></footer>
     </div>
 
+    <!-- Tier 4 Feature 19: Caps Lock Warning -->
+    <div id="capsWarning" class="caps-warning center">&#8682; Caps Lock is ON</div>
+
+    <div class="stats center">
+      <div class="stat-block if">
+        <div id="timeName" class="stat-name yellow if">Time</div>
+        <div id="time" class="details if ">30</div>
+      </div>
+
+      <div class="stat-block if">
+        <div id="cwName" class="stat-name yellow if">CW</div>
+        <div id="cw" class="details if">0</div>
+      </div>
+    </div>
+
+    <!-- Feature 5: Ghost Racer badge -->
+    <div id="ghostBadge" class="ghost-badge center"></div>
+    <!-- Feature 5: New PB badge -->
+    <div id="newPBBadge" class="pb-badge yellow center">&#127942; New Personal Best!</div>
+    <!-- Tier 3 Feature 13: Daily Streak badge -->
+    <div id="streakBadge" class="streak-badge center"></div>
+
+    <div class="text-display" id="textDisplay">
+
+    </div>
+
+    <!-- Feature 4: Custom text input section -->
+    <div id="customModeSection" class="custom-mode-section">
+      <textarea id="customTextInput" class="custom-text-input"
+        placeholder="Paste your own text here — article, code, quote, anything..."></textarea>
+      <div class="center" style="margin-top:8px;">
+        <a id="loadCustomBtn" class="yellow" href="#">&#9654; Load &amp; Start</a>
+      </div>
+    </div>
+
+    <div class="input-area center">
+      <textarea rows="1" class="text-input" id="textInput" autofocus autocomplete="off" autocorrect="off"
+        autocapitalize="off" spellcheck="false"></textarea>
+    </div>
+
+    <div class="restart-button center">
+      <a id="restartBtn" class="current" href="#" data-tooltip="Restart typing test (or press Escape in Zen Mode)">
+        <i class="fas fa-redo"></i>
+      </a>
+    </div>
+
+    <!-- ═══ EXTRA RESULTS PANEL ═══ -->
+    <div id="extraResultsPanel">
+
+      <!-- Feature 8: Accuracy Breakdown -->
+      <div id="accuracyBreakdown" class="result-section">
+        <div class="result-section-title yellow">&#128202; Result Breakdown</div>
+        <div id="accuracyGrid" class="accuracy-grid"></div>
+      </div>
+
+      <!-- Feature 1: Live WPM Graph -->
+      <div id="wpmGraphContainer" class="result-section">
+        <div class="result-section-title yellow">&#128200; WPM Over Time</div>
+        <canvas id="wpmChart" height="100"></canvas>
+      </div>
+
+      <!-- Feature 3: Rage Quit — Problem Words -->
+      <div id="problemWordsContainer" class="result-section">
+        <div class="result-section-title yellow">&#9888;&#65039; Problem Words <span
+            style="color:#52575d;font-size:13px;">(struggled with backspacing)</span></div>
+        <div id="problemWordsList"></div>
+      </div>
+
+      <!-- Feature 2: Keyboard Heatmap -->
+      <div id="keyboardContainer" class="result-section">
+        <div class="result-section-title yellow">&#128293; Mistake Heatmap</div>
+        <div id="keyboardHeatmap"></div>
+        <div class="heat-legend">
+          <span class="key heat-1">low</span>
+          <span class="key heat-2">mid</span>
+          <span class="key heat-3">high</span>
+          <span style="color:#52575d;font-size:12px;margin-left:6px;">errors</span>
+        </div>
+      </div>
+
+      <!-- Feature 9: Session History -->
+      <div id="sessionHistoryContainer" class="result-section">
+        <div class="result-section-title yellow">&#128203; Session History <span
+            style="color:#52575d;font-size:12px;">(last 25)</span></div>
+        <div class="history-table-wrapper">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>WPM</th>
+                <th>Acc</th>
+                <th>Mode</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+    <footer class="center">©2021 <a class="grey" href="https://shreyagarwal13.github.io/shrey_personal_website/">Shrey
+        Agarwal</a></footer>
+  </div>
 
 
 
 
-    <!-- Bootstrap script -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <!-- My Javascript -->
-    <script src="app.js"></script>
-  </body>
+  <!-- Bootstrap script -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!-- Chart.js for Feature 1: Live WPM Graph -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+  <!-- My Javascript -->
+  <script src="app.js"></script>
+</body>
+
 </html>
