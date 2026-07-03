@@ -71,32 +71,6 @@ Type-Sprint/
 
 ---
 
-## 🛠️ Local Setup & Running
-
-Because Type-Sprint is built as a static client-side web application, running it locally is simple and requires no compilation.
-
-### Method 1: Double-Click
-Simply download or clone the repository and double-click `index.html` to open it directly in any modern web browser.
-
-### Method 2: Serve via Node (Recommended)
-To ensure smooth browser local storage permissions and mock assets, you can run it using a quick local web server:
-
-1. Open your terminal in the project directory.
-2. Run:
-   ```bash
-   npx serve . -p 3000
-   ```
-3. Open your browser and navigate to `http://localhost:3000`.
-
-### Method 3: Python HTTP Server
-If you have Python installed:
-```bash
-python -m http.server 3000
-```
-Then navigate to `http://localhost:3000`.
-
----
-
 ## 📝 License & Credits
 
 Feel free to open issues, submit pull requests, or fork this repository to build your own custom typing trainer features!
