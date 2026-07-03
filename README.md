@@ -98,7 +98,5 @@ Then navigate to `http://localhost:3000`.
 ---
 
 ## 📝 License & Credits
-*   **Original UI Layout & Base Typing Engine:** Designed by Saqib Hussain.
-*   **Advanced Features & Analytics Integration:** Enhanced with real-time graphs, custom keyboard heatmaps, audio feedback synthesis, ghost racing, custom tooltips, layout centering, and custom drilling.
 
 Feel free to open issues, submit pull requests, or fork this repository to build your own custom typing trainer features!
